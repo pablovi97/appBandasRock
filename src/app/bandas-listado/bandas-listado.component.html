@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+      <input class="search-bar col-12 my-2 p-4" type="text" name="" id="" placeholder="Search" [(ngModel)]="filtrarBanda">
+      <div class="card text-left col-2 m-1" *ngFor="let banda of bandas| filter:filtrarBanda"
+        (click)="verDetalleBanda(banda)">
+        <img class="card-img-top" src="assets/portadas/{{banda.imagen}}.png" alt="">
+        <div class="card-body">
+          <h4 class="card-title">{{banda.nombre}}</h4>
+        </div>
+        <div class="button-container my-1">
+        </div>
+        <div class="btn-group" role="group" aria-label="First group">
+          <button class="btn btn-info btn-lg m-1" (click)="editarBanda(banda)">editar</button>
+          <button class="btn btn-danger btn-lg m-1" (click)="borrarBanda(banda)">quitar</button>
+        </div>
+      </div>
+    </div>
+    <button class="add-movie-button" (click)="addBanda()"></button>
+    
+  </div>

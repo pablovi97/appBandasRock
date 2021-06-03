@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="card my-5">
+      <img
+        class="card-img-top"
+        src="assets/portadas/{{ bandaSelect.imagen }}.png"
+        alt=""
+      />
+      <div class="card-body">
+        <h4 class="card-title">{{ bandaSelect.nombre }}</h4>
+        <p class="card-text">{{ bandaSelect.historia }}</p>
+      </div>
+    </div>
+  </div>
+  <button class="add-movie-button" (click)="volver()"></button>
+</div>

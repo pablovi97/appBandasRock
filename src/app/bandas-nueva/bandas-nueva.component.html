@@ -1,0 +1,27 @@
+
+<div class="container">
+    <div class="row my-3">
+        <form class="form-group col-12" action="" (ngSubmit)="addBanda()">
+            <h3 class="text-center">Introduce una nueva banda</h3>
+          <label class="mt-3" for="">Nombre</label>
+          <input type="text"
+            class="form-control" name="" id="" [formControl]="nombre" aria-describedby="helpId" placeholder="">
+          <small id="helpId" class="form-text text-muted" >Introduce el nombre de la banda</small>
+          <label class="mt-3" for="">Año</label>
+          <input type="text"
+            class="form-control" name="" id="" [formControl]="anio" aria-describedby="helpId" placeholder="">
+          <small id="helpId" class="form-text text-muted">Año de fundación de la banda</small>
+          <label class="mt-3" for="">Historia</label>
+          <textarea type="text"  rows="10" cols="50"
+            class="form-control" name="" id="" [formControl]="historia" aria-describedby="helpId" placeholder=""></textarea>
+          <small id="helpId" class="form-text text-muted">Introduce la historia de la banda</small>
+          <label class="mt-3" for="">Integrantes</label>
+          <input type="text"
+            class="form-control" name="" id="" [formControl]="integrantes" aria-describedby="helpId" placeholder="">
+          <small id="helpId" class="form-text text-muted">Introduce los integrantes de la banda</small>
+          <button type="submit" class="btn btn-success btn-block btn-lg mt-3" >Crear</button>
+        </form>
+    </div>
+    <button class="add-movie-button" (click)="volver()"></button>
+</div> 
+

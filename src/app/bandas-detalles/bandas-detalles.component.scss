@@ -1,0 +1,32 @@
+
+
+
+.add-movie-button {
+    background: transparent;
+    border: none;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    padding: 10px 10px 10px 10px ;
+    background-image: url('../../assets/arrow-circle-left-solid.svg');  
+    background-repeat:no-repeat;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    transition: all 300ms ease 0ms;
+    z-index: 99;
+}
+
+.add-movie-button:active {
+    color: black;
+    background-color: white;
+}
+
+.add-movie-button:focus-visible {
+    outline: none !important;
+    border: none !important;
+}
+
+
