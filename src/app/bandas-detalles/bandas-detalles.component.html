@@ -1,35 +1,34 @@
 <div class="container">
   <div class="row card-item">
+    <div class="image-item col-12 col-md-6">
+      <iframe class="card-img-top"
+      width="560"
+      height="315"
+      [src]="controllerSrc"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+    </div>
+    <div class="text-item col-12 col-md-6">
+      <div class="card-body">
+        <h4 class="card-title">{{ bandaSelect.nombre }}</h4>
+        <hr />
+        <small>{{ bandaSelect.anio }} </small>
+        <p class="card-text">{{ bandaSelect.historia }}</p>
 
-      <div class="image-item col-12 col-md-6">
-        <img
-        class="card-img-top"
-        src="assets/portadas/{{ bandaSelect.imagen }}.png"
-        alt=""
-      />
-      </div>
-      <div class="text-item col-12 col-md-6">
-        <div class="card-body">
-          <h4 class="card-title">{{ bandaSelect.nombre }}</h4>
-          <hr>
-          <small>{{bandaSelect.anio}}
-          </small>
-          <p class="card-text">{{ bandaSelect.historia }}</p>
-
-
-          <p class="title">Integrantes :</p>
-          <hr>
-          <ul class="list-clouds" >
-            <li *ngFor="let inte of bandaSelect.integrantes">
-                <a href="">{{inte}}</a>
-            </li>
+        <p class="title">Integrantes :</p>
+        <hr />
+        <ul class="list-clouds">
+          <li *ngFor="let inte of bandaSelect.integrantes">
+            <a href="">{{ inte }}</a>
+          </li>
         </ul>
-        </div>
-
-      
       </div>
-
+    </div>
     
 
-  <button class="add-movie-button" (click)="volver()"></button>
-
+    <button class="add-movie-button" (click)="volver()"></button>
+  </div>
+</div>

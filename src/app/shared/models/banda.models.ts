@@ -6,6 +6,7 @@ export class Banda {
         public imagen: string |null,
         public historia: string,
         public anio: number,
+        public video:string,
         public integrantes:  string[] 
     ) { }
 }

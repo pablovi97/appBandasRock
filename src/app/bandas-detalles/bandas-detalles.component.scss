@@ -35,6 +35,11 @@ p {
 .image-item {
   padding: 0px;
 }
+@media (max-width:769px) {
+  .image-item {
+    height: 300px;
+  }
+}
 
 .list-clouds li a {
   display: inline-block;

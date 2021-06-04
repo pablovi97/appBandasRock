@@ -12,6 +12,8 @@ export class BandasNuevaComponent implements OnInit {
   banda: Banda;
   nombre = new FormControl('' ,[Validators.required]);
   anio = new FormControl('' ,[Validators.required]);
+  imagenURL = new FormControl('' ,[Validators.required]);
+  video = new FormControl('' ,[Validators.required]);
   historia = new FormControl('' ,[Validators.required]);
   integrantes = new FormControl('' ,[Validators.required]);
 
@@ -24,7 +26,8 @@ export class BandasNuevaComponent implements OnInit {
     this.banda = {
       id : null ,
       nombre : this.nombre.value,
-      imagen : null,
+      imagen : this.imagenURL.value,
+      video : this.video.value,
       anio : this.anio.value,
       historia: this.historia.value,
       integrantes: this.integrantes.value.split(",")

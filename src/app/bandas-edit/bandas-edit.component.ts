@@ -12,7 +12,9 @@ import { Router } from '@angular/router';
 export class BandasEditComponent implements OnInit {
   banda :Banda;
   nombre = new FormControl('');
+  imagenURL = new FormControl('');
   anio = new FormControl('');
+  video = new FormControl('');
   historia = new FormControl('');
   integrantes = new FormControl('');
   constructor(private _location: Location ,private _router: Router) { }
@@ -23,7 +25,10 @@ export class BandasEditComponent implements OnInit {
   cargarBanda(){
     if(localStorage.getItem('editBanda')){
       this.banda = JSON.parse(localStorage.getItem('editBanda'));
+      console.log(this.banda)
       this.nombre.setValue(this.banda.nombre);
+      this.imagenURL.setValue(this.banda.imagen);
+      this.video.setValue(this.banda.video);
       this.anio.setValue(this.banda.anio);
       this.historia.setValue(this.banda.historia);
       this.integrantes.setValue(this.banda.integrantes);
@@ -35,13 +40,15 @@ export class BandasEditComponent implements OnInit {
   }
 
   editBanda(){
+   let inte = this.integrantes.value.toString();
     this.banda = {
       id : this.banda.id,
-      imagen : this.banda.imagen,
+      video: this.video.value,
+      imagen : this.imagenURL.value,
       nombre : this.nombre.value,
       anio : this.anio.value,
       historia: this.historia.value,
-      integrantes: this.integrantes.value.split(",")
+      integrantes: inte.split(",")
     }
     let bandaJSON = JSON.stringify(this.banda);
     localStorage.setItem('nuevaBandaEdit', bandaJSON);

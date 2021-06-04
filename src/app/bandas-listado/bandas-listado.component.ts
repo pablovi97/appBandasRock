@@ -37,6 +37,8 @@ export class BandasListadoComponent implements OnInit {
         if (obj.id === BandaEditada.id) {
         obj.nombre =  BandaEditada.nombre;
         obj.anio =  BandaEditada.anio;
+        obj.imagen =  BandaEditada.imagen;
+        obj.video =  BandaEditada.video;
         obj.historia =  BandaEditada.historia;
         obj.integrantes =  BandaEditada.integrantes;
         }

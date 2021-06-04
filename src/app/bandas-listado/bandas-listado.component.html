@@ -14,7 +14,7 @@
     (click)="verDetalleBanda(banda)"
   >
     <ng-container *ngIf="banda.imagen">
-      <img src="assets/portadas/{{ banda.imagen }}.png" alt="" />
+      <img src="{{banda.imagen}}" alt="" /> 
       <div class="tag background">
         <a href="">{{ banda.nombre }}</a>
       </div>
