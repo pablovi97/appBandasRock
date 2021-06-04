@@ -1,16 +1,35 @@
 <div class="container">
-  <div class="row">
-    <div class="card my-5">
-      <img
+  <div class="row card-item">
+
+      <div class="image-item col-12 col-md-6">
+        <img
         class="card-img-top"
         src="assets/portadas/{{ bandaSelect.imagen }}.png"
         alt=""
       />
-      <div class="card-body">
-        <h4 class="card-title">{{ bandaSelect.nombre }}</h4>
-        <p class="card-text">{{ bandaSelect.historia }}</p>
       </div>
-    </div>
-  </div>
+      <div class="text-item col-12 col-md-6">
+        <div class="card-body">
+          <h4 class="card-title">{{ bandaSelect.nombre }}</h4>
+          <hr>
+          <small>{{bandaSelect.anio}}
+          </small>
+          <p class="card-text">{{ bandaSelect.historia }}</p>
+
+
+          <p class="title">Integrantes :</p>
+          <hr>
+          <ul class="list-clouds" >
+            <li *ngFor="let inte of bandaSelect.integrantes">
+                <a href="">{{inte}}</a>
+            </li>
+        </ul>
+        </div>
+
+      
+      </div>
+
+    
+
   <button class="add-movie-button" (click)="volver()"></button>
-</div>
+

@@ -4,22 +4,22 @@
         
         <div class="form-group col-12">
             <h3 class="text-center">Modifica la banda</h3>
-          <label class="mt-3" for="">Nombre</label>
+          <label class="mt-3 text-white" for="">Nombre</label>
           <input type="text"
             class="form-control" name="" id="" [formControl]="nombre" aria-describedby="helpId" placeholder="">
-          <small id="helpId" class="form-text text-muted">Introduce el nombre de la banda</small>
-          <label class="mt-3" for="">Año</label>
-          <input type="text"
+          <small id="helpId" class="form-text text-white">Introduce el nombre de la banda</small>
+          <label class="mt-3 text-white" for="">Año</label>
+          <input type="number"
             class="form-control" name="" id="" [formControl]="anio" aria-describedby="helpId" placeholder="">
-          <small id="helpId" class="form-text text-muted">Año de fundación de la banda</small>
-          <label class="mt-3" for="">Historia</label>
+          <small id="helpId" class="form-text text-white">Año de fundación de la banda</small>
+          <label class="mt-3 text-white" for="">Historia</label>
           <textarea type="text"  rows="10" cols="50"
             class="form-control" name="" id="" [formControl]="historia" aria-describedby="helpId" placeholder=""></textarea>
-          <small id="helpId" class="form-text text-muted">Introduce la historia de la banda</small>
-          <label class="mt-3" for="">Integrantes</label>
+          <small id="helpId" class="form-text text-white">Introduce la historia de la banda</small>
+          <label class="mt-3 text-white" for="">Integrantes</label>
           <input type="text"
             class="form-control" name="" id="" [formControl]="integrantes" aria-describedby="helpId" placeholder="">
-          <small id="helpId" class="form-text text-muted">Introduce los integrantes de la banda</small>
+          <small id="helpId" class="form-text text-white">Introduce los integrantes de la banda separados por comas (ejem : pepe, juan)</small>
           <button type="button" class="btn btn-warning btn-block btn-lg mt-3" (click)="editBanda()">Actualizar</button>
         </div>
     </div>

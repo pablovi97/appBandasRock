@@ -27,7 +27,7 @@ export class BandasNuevaComponent implements OnInit {
       imagen : null,
       anio : this.anio.value,
       historia: this.historia.value,
-      integrantes: this.integrantes.value
+      integrantes: this.integrantes.value.split(",")
     }
     let bandaJSON = JSON.stringify(this.banda);
     localStorage.setItem('nuevaBanda', bandaJSON);
